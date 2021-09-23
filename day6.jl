@@ -6,11 +6,11 @@ function day6()
   collected = Set([])
   for line in readlines("day6.txt")
     println(collected)
-    if length(line) == 0
+    if length(line) == 0 || length(collected) == 0
       sumcount += count(collected)
-      collected = Set([])
+      collected = Set(line)
     end
-    union!(collected, line)
+    intersect!(collected, line)
   end
   sumcount += count(collected)
   return sumcount
