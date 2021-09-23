@@ -9,10 +9,5 @@ function toID(seat_instructions)
   end
   return id
 end
-#maxv = 0
-#for line in readlines("day5.txt")
-#  global maxv = max(maxv, toID(line))
-#  println(toID(line))
-#end
-println(maximum(toID.(readlines("day5.txt"))))
+println(sum(toID.(readlines("day5.txt")))- (835*836/2) + (11*10/2))
 
